@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 
   def golf
   end
+
+  def info
+  	
+  end
 end
