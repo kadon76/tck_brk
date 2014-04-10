@@ -1,2 +1,39 @@
-<h1>TCK - The Trust Company of Kansas</h1>
-<p>Find me in app/views/static_pages/info.html.erb</p>
+<% provide(:title, 'Info') %>
+	<div class="singleCol">
+    	<h1>Hotel Information</h1>
+        <table>
+        	<tr>
+            	<td width="15%">&nbsp;</td>
+            	<td valign="top" colspan="2"><h4>FairField Inn &amp; Suites</h4></td>
+            </tr>
+            <tr>
+            	<td>&nbsp;</td>
+            	<td valign="top" colspan="2"><h4>Downtown Omaha</h4></td>
+           	</tr>
+           	<tr>
+            	<td>&nbsp;</td>
+           		<td valign="top" colspan="2"><h2><%= link_to "Map", "http://goo.gl/maps/pIV5D" %></h2></td>
+            </tr>
+           	<tr>
+            	<td>&nbsp;</td>
+           		<td valign="top" colspan="2"><h2><%= link_to "Contact Information", "http://www.marriott.com/hotels/fact-sheet/travel/omafd-fairfield-inn-and-suites-omaha-downtown/" %></h2></td>
+            </tr>
+		</table>
+        <h1>TCK Contact Information</h1>
+        <table>
+            <tr>
+            	<td width="15%">&nbsp;</td>
+                <td><h4>While in Omaha</h4>
+                <h4>Martha Linsner, TCK President</h4>
+                </td>
+            </tr>
+           	<tr>
+            	<td>&nbsp;</td>
+           		<td valign="top" colspan="2"><h2><%= link_to "MLinsner@TCKansas.com", "mailto:MLinsner@TCKansas.com" %></h2></td>
+            </tr>
+           	<tr>
+            	<td>&nbsp;</td>
+           		<td valign="top" colspan="2"><h2>316-304-1075 - Cell</h2></td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,555 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #24140C;
+	margin: 0;
+	padding: 0;
+	color: #404040;
+	font-size: medium;
+	/*float: none;*/
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin-left: 5%;
+	list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p, form {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	margin-bottom: 0;
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: underline;
+}
+h1 {
+	font-size: x-large;
+	color: #952B1F;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: large;
+	color: #24140C;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+h2.mixed {
+	text-transform: none;
+	margin: 0;
+	font-weight: normal;
+}
+
+
+span.h2 {
+	font-size: large;
+	color: #24140C;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+h3 {
+	font-size: small;
+	color: #3D5054;
+}
+
+span.h3 {
+	font-size: small;
+	color: #3D5054;
+}
+
+h4 {
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	font-weight: normal;
+}
+span.h4 {
+	text-transform: uppercase;
+}
+h6 {
+	font-size:xx-small;
+}
+p.red {
+	color: #952B1F;
+	font-size: small;
+}
+span.red {
+	color: #952B1F;
+	font-weight: bold;
+	text-transform: none;
+}
+span.bold {font-weight: bold;}
+.noMargin {margin: 0;}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 90%;
+	/*max-width: 1920px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	/*min-width: 768px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background-color: #24140C;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+
+/* ~~ header ~~ */
+.header {
+	width: 90%;
+	/*overflow: visible;*/
+	/*resize:vertical;*/
+	background: #24140C;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.colHeader {
+	text-align: center;
+	width: 100%;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+.colHeader img {width: 90%; height: auto;}
+
+.navbar {
+	background-color: #21140C;
+	width: 100%;
+	overflow: auto;
+	margin-left: 25px;
+}
+.navbar ul {
+	margin: 0;
+	float: left;
+	list-style:none;
+	font-size: large;
+	/*background-color: #E3C9A6;*/
+ }
+.navbar ul li {
+	display: inline;
+	background: none;
+} 
+
+.navbar li a {
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	background: #ECC65F;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	
+	padding: 0.25em;		
+
+	margin: 0 0.25em;
+ }
+
+.navbar li a#onlineTab {
+	background: #952B1F;
+}
+
+/* ~~ content holder classes ~~ */
+.logo {
+	width: 220px;
+	
+	height: 116px;
+	background: #952B1F;
+	position: absolute;
+	right: 0%;
+	float: right;
+}
+#logoImgHolder{
+	background-image: url(/assets/logo5.png);
+	width:200px; height: 96px;
+	position: absolute;
+	
+	left: 10px;
+	top: 10px;
+	
+}
+#logoImgHolder a {
+	display: block;
+	height: 100%;
+}
+.colorBox{
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: orange;
+	padding:0px;
+	border:0px;
+	margin:12px;
+	overflow:auto;
+}
+.colorBox2{
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: orange;
+	padding:0px;
+	border:0px;
+	margin: 5px 5px 5px 15px;
+	overflow:auto;
+}
+.inline {margin: 5px;}
+.colorBox1{
+	float:left;
+	width:20px;
+	height:20px;
+	background-color: orange;
+	padding:0px;
+	border:0px;
+	margin: 12px 12px 12px 35px;
+	overflow:auto;
+}
+.inner{
+	width: 100%;
+}
+.half {width: 50%;}
+.lessthanhalf {width: 40%;}
+.placeholder {margin: 20% 0;}
+.small {margin: 10% 0;}
+.textbox {background-color: #DDD5C3;}
+.colContainer {
+	overflow: hidden;
+	border-radius: 25px;
+}
+.singleCol {
+	width: 100%;
+	background-color: #E8E3D4;
+	padding-bottom: 10px;
+	overflow: auto;
+	float: left;
+	border-radius: 25px;
+	
+}
+.leftCol {
+	width: 50%;
+	background-color: #E8E3D4;
+	padding-bottom: 10px;
+	overflow: auto;
+	float: left;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+.leftCol img {
+	padding: 2%;
+	border-radius: 25px;
+	width: 96%;
+	height: auto;
+}
+.leftCol img.smallPic {
+	width: 24%;
+	float: left;
+}
+.leftCol img.medPic {
+	width: 46%;
+	float: left;
+}
+li:first-child{
+	background-image: url(/images/buttonbrown1.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+li:nth-child(2){
+	background-image: url(/images/buttonbrown2.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+li:nth-child(3){
+	background-image: url(/images/buttonbrown3.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+li.square{
+	background-image: url(/images/buttonbrownsquare.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+li.normal {
+	/*list-style-type: disc;*/
+	background: none;
+	padding-left: 0;
+	margin-left: 5%;
+}
+li.ss-choice-item {
+	background: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+.ss-terms {
+	margin-left: 5%;
+	width: auto;
+	float: left;
+	text-align: center;
+}
+.powered-by-logo {
+	width: 105px;
+	float: left;
+}
+.discList {list-style-type: disc;}
+
+ul li:nth-child(4){
+	background-image: url(../images/button4.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+li.star{
+	background-image: url(../images/circleStarButton.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+
+.rightCol {
+	float: left;
+	width: 50%;
+	background-color: #DDD5C3;
+	padding-bottom: 10px;
+	overflow: auto;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+
+}
+.rightCol img {
+	padding: 2%;
+	width: 25%;
+	height: auto;
+}
+
+.rightCol ul li:first-child{
+	background-image: url(/images/button1.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+	
+}
+.rightCol ul li:nth-child(2){
+	background-image: url(/images/button2.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+.rightCol ul li:nth-child(3){
+	background-image: url(/images/button3.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+.rightCol ul li:nth-child(4){
+	background-image: url(/images/button4.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+.rightCol ul li:nth-child(5) {
+	background-image: url(/images/button5.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+.rightCol ul li.square{
+	background-image: url(/images/buttonbrownsquare.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+.rightCol ul li.star{
+	background-image: url(/images/circleStarButton.png);
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+}
+
+.mobile {
+	visibility: hidden;
+	display: none;
+}
+.wide {
+	visibility: visible;
+}
+
+
+ 
+
+
+/* ~~ The footer ~~ */
+.colFooter {
+	text-align: center;
+	width: 100%;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+.colFooter img {width: 90%; height: auto;}
+.boxHolder {display: inline-block;}
+
+.footer {
+	text-align: center;
+	width: 100%;
+	/*padding: 0 10px;*/
+	margin: 1em 0 0 0;
+	background: #2b1b12;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	/*margin: 0 2%;*/
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+@media only screen and (max-width: 599px) {
+  /* 480 =================================================== */
+.container {
+	width: 100%;
+	max-width: 599px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 320px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+.header {
+	width: 100%;
+	/*overflow: visible;*/
+	resize: vertical;
+	
+}
+.navbar {
+	margin: 0;
+}
+.navbar ul {
+	visibility: hidden;
+}
+.logo {
+	
+	width: 100%;
+	/*overlow: auto; */
+	/*resize: vertical;*/
+	
+	height: auto;
+	background: #952B1F;
+	
+	position: absolute;
+	left: 0%;
+	/*margin: 5%;*/
+	/*
+	float: left;*/
+}
+#logoImgHolder{
+	/*margin: 10px 2%;*/
+	background-image: url(../images/logo5.png);
+	background-color: #952B1F;
+	width:100%;
+	background-repeat: no-repeat;
+	background-position:center;
+	/*position: absolute;*/
+	
+	left: 0%;
+	/*top: 5px;*/
+	
+	/*float: right;*/
+}
+#logoImgHolder a {
+	display: block;
+	height: 100%;
+}
+.colContainer {
+	padding-top: 5%;
+}
+
+.wide {
+	display: none;
+	visibility: hidden;
+}
+.mobile {
+	visibility: visible;
+	display: block;
+	padding-top: 10%;
+}
+.mobile img {
+	width: 90%;
+	height: auto;
+	margin: 5%;
+}
+.mobile h1 {
+	font-size: large;
+}
+.mobile h2 {
+	font-size: medium;
+}
+.mobile span.h2 {
+	font-size: medium;
+}
+.mobile h3 {
+	font-size: x-small;
+}
+.mobile h4 {
+	font-size: small;
+}
+.mobile span.h4 {
+	font-size: small;
+}
+.mobile p {
+	font-size: small;
+}
+img.mobile {
+	width: 90%;
+	margin: 0 5%;
+}
+.colContainer.mobile {
+	background-color: #E8E3D4;
+}
+.colorBox2 {
+	width: 12px;
+	height: 12px;
+}
+}

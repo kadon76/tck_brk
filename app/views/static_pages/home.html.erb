@@ -1,2 +1,68 @@
-<h1>TCK - The Trust Company of Kansas</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Home') %>
+	<div class="singleCol">
+    	<h1>Friday, May Two</h1>
+        <table>
+        	<tr>
+            	<td valign="top"><h4>1:30PM</h4></td>
+                <td><h4>Golf</h4>
+                <h2><%= link_to "TEE TIMES & PAIRINGS", golf_path %></h2>
+                <h2><%= link_to "COURSE INFORMATION", "http://www.omahacc.org/Default.aspx?p=DynamicModule&pageid=370553&ssid=283993&vnf=1" %></h2>
+                </td>
+            </tr>
+            <tr>
+            	<td valign="top"><h4>2-5:00PM</h4></td>
+                <td><h4>Durham Art Museum</h4>
+                <h2><%= link_to "LOCATION", "http://www.durhammuseum.org/visit/info.aspx" %></h2>
+                <h2><%= link_to "SPECIAL SHOWING: 1968 EXHIBIT", "http://www.durhammuseum.org/experience/exhibits/temporary/exhibit-details.aspx?ID=286" %></h2>
+                </td>
+           	</tr>
+           	<tr>
+           		<td valign="top"><h4>6:00PM</h4></td>
+                <td><span class="h2">Dinner </span><span class="red">(dinner attire required)</span>
+                <h3>MEET IN HOTEL LOBBY AT 5:30PM</h3>
+                <h4>OMAHA COUNTRY CLUB</h4>
+                <h2><%= link_to "DINING & LOCATION", "http://www.omahacc.org/Default.aspx?p=DynamicModule&pageid=370554&ssid=283994&vnf=1" %></h2>
+                </td>
+            </tr>
+        </table>
+        <h1>Saturday, May Three</h1>
+        <table>
+        	<tr>
+            	<td valign="top"><h4>8:30AM</h4></td>
+                <td><h4>Berkshire Hathaway Annual Meeting</h4>
+                <h6>&nbsp;</h6>
+                <h3>BREAKFAST - HOTEL LOBBY</h3>
+                <h3>BEGINS @ 6:30 AM</h3>
+                <h6>&nbsp;</h6>
+                <h3>WE RECOMMEND A 7:00 AM DEPARTURE</h3>
+                <h3>FOR OPTIMAL SEATING CHOICES</h3>
+                <h6>&nbsp;</h6>
+                <h3>COMPANY MOVIE BEGINS @ 8:30 AM</h3>
+                <h6>&nbsp;</h6>
+                <h2><%= link_to "LOCATION", "http://www.centurylinkcenteromaha.com/Directionsparking.aspx" %></h2>
+                <h2><%= link_to "VISITORS GUIDE", "/assets/VisGuide2014.pdf" %> <span class="red">(pdf download)</span></h2>
+                </td>
+            </tr>
+            <tr>
+            	<td colspan="2"><p><span class="red">SATURDAY AFTERNOON - FREE TIME</span></p></td>
+            </tr>
+            <tr>
+            	<td valign="top"><h4>5:30PM</h4></td>
+                <td><h4>DINNER<span class="red"> (dinner attire required)</span></h4>
+                <h4>FLATIRON CAFE</h4>
+                <h2><%= link_to "WEB", "http://www.theflatironcafe.com/index.html" %></h2>
+                <h2><%= link_to "LOCATION", "http://www.mapquest.com/maps?city=Omaha&state=NE&address=1722+Saint+Marys+Ave&zipcode=68102-2517&cat=The+Flatiron+Cafe&country=US&latitude=41.255347&longitude=-95.938767&geocode=ADDRESS" %></h2>
+                </td>
+           	</tr>
+        </table>
+        <h1>Sunday, May Four</h1>
+        <table>
+        	<tr>
+            	<td valign="top"><h4>9:00AM</h4></td>
+                <td><h4>BORSHEIM'S FINE JEWELRY & GIFTS</h4>
+                <h4>BUFFET BRUNCH <span class="red">(optional)</span></h4>
+                <h2><%= link_to "LOCATION", "https://www.google.com/#q=borsheims+omaha" %></h2>
+                </td>
+            </tr>
+        </table>    
+    </div>

@@ -1,7 +1,9 @@
 TckBrk::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/golf"
-  get "static_pages/info"
+  root 'static_pages#home'
+  match '/home', to: 'static_pages#home', via: 'get'
+  match '/golf', to: 'static_pages#golf', via: 'get'
+  match '/info', to: 'static_pages#info', via: 'get'
+  match '/course', to: 'static_pages#course', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
